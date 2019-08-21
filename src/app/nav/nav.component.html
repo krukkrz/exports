@@ -1,0 +1,28 @@
+<!-- <form> -->
+  <mat-form-field>
+    <mat-label>Cars</mat-label>
+    <mat-select matNativeControl>
+      <mat-option value="volvo">Volvo</mat-option>
+      <mat-option value="saab">Saab</mat-option>
+      <mat-option value="mercedes">Mercedes</mat-option>
+      <mat-option value="audi">Audi</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date from">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker1" placeholder="Choose a date to">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="getExp()">Submit</button>
+  </div>
+
+<!-- </form> -->

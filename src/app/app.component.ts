@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild } from '@angular/core';
+import { Export } from './models/export.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'exports';
+  
+  exports: Export[]
+
+  receiveExports($event) {
+    this.exports = $event
+    console.log('app component: ', this.exports);
+  }
 }

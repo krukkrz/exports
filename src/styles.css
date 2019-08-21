@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.side-nav{
+    padding: 10px
+}
+
+.example-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    /* padding: 50px; */
+}
+
+.example-sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    padding: 50px;
+}
+
+.content{
+    padding: 50px
+}
