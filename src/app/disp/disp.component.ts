@@ -11,7 +11,7 @@ export class DispComponent implements OnInit {
   constructor() { }
 
   @Input() exports: Export[]
-  displayedColumns: string[] = ['id', 'name', 'date', 'time', 'user', 'local'];
+  displayedColumns: string[] = ['name', 'date', 'time', 'user', 'local'];
 
   ngOnInit() {
   }
