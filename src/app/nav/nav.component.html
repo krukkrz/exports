@@ -1,28 +1,28 @@
-<!-- <form> -->
-  <mat-form-field>
-    <mat-label>Cars</mat-label>
-    <mat-select matNativeControl>
-      <mat-option value="volvo">Volvo</mat-option>
-      <mat-option value="saab">Saab</mat-option>
-      <mat-option value="mercedes">Mercedes</mat-option>
-      <mat-option value="audi">Audi</mat-option>
+<form [formGroup]="form">
+  <mat-form-field >
+    <mat-label>Locals</mat-label>
+    <mat-select matNativeControl formControlName="local">
+      <mat-option value="">All...</mat-option>
+      <mat-option value="testLocal1">testLocal1</mat-option>
+      <mat-option value="testLocal2">testLocal2</mat-option>
+      <mat-option value="testLocal3">testLocal3</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date from">
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date from" formControlName="from">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput [matDatepicker]="picker1" placeholder="Choose a date to">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+    <input matInput [matDatepicker]="picker1" placeholder="Choose a date to" formControlName="to">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
   </mat-form-field>
 
   <div class="example-button-row">
-    <button mat-raised-button color="primary" (click)="getExp()">Submit</button>
+    <button mat-raised-button color="primary" (click)="getExp(form.value.local, form.value.from, form.value.to)">Submit</button>
   </div>
 
-<!-- </form> -->
+</form>

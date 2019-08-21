@@ -13,6 +13,5 @@ export class AppComponent {
 
   receiveExports($event) {
     this.exports = $event
-    console.log('app component: ', this.exports);
   }
 }

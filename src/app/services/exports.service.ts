@@ -12,8 +12,19 @@ export class ExportsService {
     private http: HttpClient
   ) { }
 
-  public getExports(): Observable<Export[]>{
-    const url = 'http://localhost:3000/exports'
+  public getExports(local?:string, from?:string, to?:string): Observable<Export[]>{
+    let url = 'http://localhost:3000/exports?'
+    if(local){
+      url = url + "local=" + local
+    }
+    if(from){
+      url = url + "&date_time_gte=" + from
+    }    
+    if(to){
+      url = url + "&date_time_lte=" + to
+    }
+    console.log(url);
+    
     return this.http.get<Export[]>(url)
   }
 }
