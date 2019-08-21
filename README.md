@@ -4,7 +4,7 @@ Ten projekt został wygenerowany w [Angular CLI](https://github.com/angular/angu
 
 ## Pobranie node_modules
 
-Po sklonowaniu należy uruchomić komendę `npm install`
+Po sklonowaniu projektu należy uruchomić komendę `npm install`
 
 ## Uruchomienie API
 
